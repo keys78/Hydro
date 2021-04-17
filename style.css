@@ -1,0 +1,65 @@
+.slidecontainer {
+    width: 20%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    height: 30px;
+    border-radius: 7px;
+    background:linear-gradient(to right, rgb(109, 102, 0) 0%, yellow 27%, green 40%, rgb(255, 68, 68) 70%, rgb(218, 0, 0) 100%);
+    outline: none;
+    opacity: 1;
+    transition: linear all 2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5px;
+    height: 30px;
+    border: 0;
+    background-color: black;
+    cursor: pointer;
+    transition: linear all 2s;
+    
+  }
+
+
+  .Unrange{
+      width: 99%;
+      margin: auto;
+  }
+
+  .grad{
+    /* background:linear-gradient(to bottom, rgb(238, 238, 238), white 100%); */
+    background: linear-gradient(to right, #2e2d2d, #0f9b0f);
+    color:white;
+    
+   
+  }
+
+  .bgn{
+      width:97%;
+      margin:auto;
+  }
+
+  .ansPage{
+      display: none;
+      background-color: rgb(255, 255, 255);
+      /* position: absolute;
+      top:0;
+      right:511px; */
+      /* left:0px; */
+  }
+
+ .btn-s{
+    background: linear-gradient(to right, #ff0099, #493240);
+ }
+
+ .btn-s:hover{
+    background: linear-gradient(to right, #ad5389, #3c1053);
+ }
+
+ .COVER{
+     background-image: url('pexels-heloisa-freitas-1608099.jpg');
+ }

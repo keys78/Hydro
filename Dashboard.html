@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.css">
+    <title>BMI Calculator</title>
+    <link rel="icon" href="puku.ico">
+</head>
+<style>
+   
+</style>
+<body>
+
+
+    <section class="Holder h-screen grad relative xl:w-4/12 lg:w-5/12 md:w-6/12 sm:w-8/12 w-full m-auto border">
+        <div class="bgn">
+
+        
+    
+
+            <div id="mySidenav" class="sidenav blackiess absolute top-0 left-0 px-3">
+
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+                <div class="pt-6 text-2xl text-gray-100"style="font-family: 'Dancing Script', cursive;" ><i class="fas text-green-500 fa-dumbbell"></i></i>ydro</div> 
+
+                <!-- <button id="darkmode"class="bg-white py-1 px-2 rounded hover:bg-gray-100 text-xs mt-10 ml-2 focus:outline-none">DARK MODE TOGGLE</button> -->
+
+
+                    <!-- <div class="class flex justify-between items-center mt-20">
+                    <label>
+                        <input id="darkmode" type="checkbox">
+                        <span ></span>
+                        <i class="indicator"></i>
+                    </label>
+                    <span class="text-white -mt-3">Nightmode toggle</span>
+                    </div>
+   -->
+                    
+                <div class="nabfoot absolute bottom-0 right-16 text-center">
+                    <h1 class="flex"></h1>
+                    <i class="text-gray-400 hover:text-white fab fa-twitter"></i>
+                    <i class="text-gray-400 hover:text-white fab fa-facebook"></i>
+                  </h1>
+                  <p class="text-gray-200">seismic ideas | &copy; 2021.</p>
+                  </div>
+              </div>
+
+
+
+
+
+
+
+         <div class="sticky">
+
+            <div class="flex justify-between items-center">
+                <div class="">
+                    <span class="hover:text-gray-100" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                </div>
+            
+                <div class="flex">
+                 
+                    <h1><i class="text-xl text-red-700 animate-pulse fas fa-heartbeat cursor-pointer mr-5"></i></h1>
+                    <h1><i class="text-xl hover:text-blue-500 far fa-bell cursor-pointer"></i></h1>
+
+                </div>
+
+            </div>
+
+            
+            <div class="">
+                <form action="https://www.google.com/search" method="get" target="_blank" id="search-form" class="flex">
+                  <input id="filter" class="text-gray-50 py-1 px-1 w-full focus:outline-none bg-transparent border-b border-white placeholder-white" name="q" type="text" placeholder="search lists on google" autocomplete="off" autofocus>
+                  <!--button type="button"><i class="fas fa-microphone"></i></button>-->
+                </form>
+                <p class="info"></p>
+              </div>
+
+              
+
+                     <!---Welcome Area-->
+
+            <div class="">
+                <h1 id="Welcome" class="text-3xl mt-3 text-gray-300" style="font-family: 'Dancing Script', cursive;" >Welcome <span id="bminamie" class="text-gray-100"></span></h1>
+            </div>
+
+        </div>
+        
+
+        <h1 class="text-base mt-10 opacity-80 text-white" >CHECK BMI HERE</h1>
+
+
+
+        <form id="allForm" class="w-full mx-auto">
+
+            <div class="flex justify-between items-center ">
+             <p class="sm:text-xl text-base bg-transparent">Weight <span class="text-green-300 text-lg"> (kilogram)</span> :</p>
+             <input type="text" id="weight" class=" pb-2 focus:outline-none text-xl text w-6/12 border-b border-current bg-transparent"required> 
+            </div>
+
+            <div class="flex justify-between items-center">
+                <p class="sm:text-xl text-base bg-transparent">Height <span class="text-green-300 text-lg"> (meters)</span> :</p>
+                <input type="text" id="height" class="w-6/12 pb-2 focus:outline-none border-b focus:outline-none border-current bg-transparent"required>
+            </div>
+
+            
+            <div class="flex justify-between items-center">
+                <p class="sm:text-xl text-base bg-transparent">Age <span class="text-green-300 text-lg"> (years)</span> :</p>
+                <input id="agE" type="text" class="w-6/12 border-b pb-2 focus:outline-none focus:outline-none border-current bg-transparent"required>
+            </div>
+
+            <div class="flex justify-between items-center w-full">
+                <p class="sm:text-xl text-base w-4/12">Gender (<span class="text-green-500"><i class="fas fa-female"><i class="fas fa-male"></i></i></span>):</p>
+
+                <div class=" flex items-center">
+                    <label class="">Female</label>
+                    <input type="radio" name="gender" class="border-b border-current w-8 h-5"required>
+                </div>
+                <div class="flex justify-between items-center">
+                    <label>Male</label>
+                    <input type="radio" name="gender" class="border-b border-current w-8 h-5"required>
+                </div>
+
+            </div>
+
+            
+            <input type="submit" value="CALCULATE" class="btn-s text-lg mt-6 py-2 px-3 text-white rounded w-full">
+           
+         
+        </form>
+       
+
+
+
+        <!------------------WIDGET----------------------->
+         <!-- <div class=" mt-8 -mr-60">
+             <div style="width:248px;margin:0px auto;">
+                <div style="width:99.5%;border:1px solid #14FF62;border-top:none;border-bottom:none;text-align:center; height:24px;font-size:16px;padding:5px 0px 0px 0px;border-top-right-radius:5px; border-top-left-radius:5px;background-color:#29BF1F;color:##FFFFFF; font-weight:bold;">
+                <a href="https://www.theunitconverter.com/length-conversion/" style="text-decoration:none;" rel="nofollow">Hydro converter</a></div><script type="text/javascript" src="https://ww.theunitconverter.com/converter.php?l=en&c=0&a=FFFFFF&b=14FF62&s=length">
+                </script>
+            </div>
+        </div>
+                
+
+            <div class="w-full -mt-72">
+                <script type="text/javascript">
+                    med_size = '436x380';
+                    med_content='10392';
+                    med_content1='';
+                    border_color = 'BAD7F7';
+                    link_color = '000080';
+                    text_color = '000000';
+                    url='quiz-on-food-safety-for-health-news';
+                    </script>
+                    <script type="text/javascript" src="https://www.medindia.net/free-downloads/news-widget/widget.js"></script>
+            </div> -->
+
+
+
+    </section>
+
+
+    <section class="hydro h-screen xl:w-4/12 lg:w-5/12 md:w-6/12 sm:w-8/12 w-full m-auto border hidden">
+        <img src="hydroload.gif">
+    
+    </section>
+
+
+
+
+
+
+    <section class="xl:w-4/12 lg:w-5/12 md:w-6/12 sm:w-8/12 w-full m-auto border ansPage">
+
+      <div class="w-full h-20 border-none bg-green-700 text-center text-white text-2xl pt-6 relative">
+          <h1 class="backBtn text-white text-lg cursor-pointer absolute top-1 left-1 hover:text-purple-500">Back</h1>
+        <h1 style="font-family: 'Dancing Script', cursive;">Body Max Index Result</h1>
+      </div>
+
+        <div class="cont sm:w-11/12 w-full mx-auto">
+
+            <div class="flex sm:justify-between items-center sm:w-11/12 w-full mx-auto mt-4">
+                <h1 class="sm:text-left text-center text-2xl border-r w-4/12 border-current"><span class="years"></span> <span>years</span></h1>
+                <h1 class="text-2xl border-r w-4/12 border-current px-4"><span class="metre"></span> <span>m</span></h1>
+                <h1 class="text-2xl px-4"><span class="kilo"></span> <span>Kg</span></h1>
+            </div>
+
+            <div class="w-11/12 mx-auto">
+             <input type="range" min="0" max="50" value="0" class="slider mt-6 w-full " id="myRange">
+            </div>
+
+            <div class="normal text-xl text-center mt-4 -ml-4">Your BMI is: <span class="answer font-bold text-2xl">0</span></div>
+
+             <div class="flex justify-between items-center mt-10">
+                <div class="nameRange text-xl"> </div>
+                <div class="numRange text-xl"></div>
+             </div>
+
+        </div>    
+
+                <!---------------RANGES------------------------>
+
+        <div class=" border-t border-current w-full">
+            <div class="Unrange sm:px-0 px-4">
+
+                <div class="Very flex justify-between items-center mt-4 text-lg font-semibold">
+                    <h1 class="h-7 w-7 bg-yellow-300"style="background:#999D26;"></h1>
+                    <h1 class="">Very Severly Underweight</h1>
+                    <h1 class=""> < 16.0 </h1>
+
+                </div>
+
+                <div class="Severly flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7 "style="background:#CCCE2D;"></h1>
+                    <h1>Severly Underweight</h1>
+                    <h1 class=""> 16.0 - 16.9 </h1>
+                </div>
+
+                <div class="Under flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7 "style="background:#FFFF33;"></h1>
+                    <h1>Underweight</h1>
+                    <h1 class=""> 17.0 - 18.4 </h1>
+                </div>
+
+                <div class="Normal flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7 bg-green-600"></h1>
+                    <h1>Normal</h1>
+                    <h1 class=""> 18.5 - 24.9 </h1>
+                </div>
+
+                <div class="Overw flex justify-between items-center mt-4 text-lg font-semibold">
+                    <h1 class="h-7 w-7"style="background:#014122"></h1>
+                    <h1>Overweight</h1>
+                    <h1 class=""> 25.0 - 29.9 </h1>
+                </div>
+
+                <div class="Ob1 flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7"style="background:#E97452"></h1>
+                    <h1>Obese Class I</h1>
+                    <h1 class=""> 30.0 - 34.9 </h1>
+                </div>
+
+                <div class="Ob2 flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7"style="background:#C34632"></h1>
+                    <h1>Obese Class II</h1>
+                    <h1 class=""> 35.0 - 39.9 </h1>
+                </div>
+
+                <div class="Ob3 flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7"style="background:#8B0001"></h1>
+                    <h1>Obese Class III</h1>
+                    <h1 class=""> > 40.0 </h1>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class=" border-t border-current w-full my-3"></div>
+
+        <div class="note w-11/12 m-auto text-gray-500 font-medium">
+
+         
+            
+        </div>
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', getInfo)
+        const newDat = document.querySelector('#bminamie');
+      
+      function getInfo() {
+        const infombmi = localStorage.getItem('bminame');
+        newDat.appendChild(document.createTextNode(infombmi));
+      } 
+      
+      </script>
+      
+      
+    
+        
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.display = "block";
+  document.getElementById("mySidenav").style.width = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.display = "none";
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+
+    <script>
+        const allForm = document.querySelector('#allForm');
+        const height = document.querySelector('#height');
+        const weight = document.querySelector('#weight');
+        const answer = document.querySelector('.answer');
+        const note = document.querySelector('.note');
+
+
+        const show = document.querySelector('.showans');
+        var slider = document.getElementById("myRange");
+
+    
+        const nameRange = document.querySelector(".nameRange");
+        const numRange = document.querySelector(".numRange");
+
+
+        allForm.addEventListener('submit', keke);
+
+        function keke(e) {
+            const x = parseInt(weight.value);
+            const y = parseFloat((Math.pow(height.value, 2)));
+
+            const reply = (x / y).toFixed(2);
+
+            slider.value = reply;
+            answer.innerHTML = reply;
+           
+
+           if(reply < 16.0){
+            
+                nameRange.innerHTML = "Very Severly Underweight";
+                nameRange.style.color = "#999D26";
+                numRange.innerHTML = "< 16.0";
+                numRange.style.color = "#999D26";
+                document.querySelector(".Very").style.color = "#999D26";
+                note.innerHTML = "There may be an underlying medical cause for your BMI, or your diet may not be providing you with enough calories. We suggest you discuss this with your GP.;"
+
+            }
+           
+           else if(reply > 16.0 & reply < 16.9){
+            
+                nameRange.innerHTML = "Severly Underweight";
+                nameRange.style.color = "#CCCE2D";
+                numRange.innerHTML = "16.0 - 16.9";
+                numRange.style.color = "#CCCE2D";
+                document.querySelector(".Severly").style.color = "#CCCE2D";
+                note.innerHTML = "Your diet may not be providing you with enough calories. We suggest you discuss this with your GP."
+
+            }
+           
+           else if(reply > 17.0 & reply < 18.4){
+            
+                nameRange.innerHTML = "Underweight";
+                nameRange.style.color = "#FFFF33";
+                numRange.innerHTML = "17.0 - 18.4";
+                numRange.style.color = "#FFFF33";
+                document.querySelector(".Under").style.color = "#FFFF33";
+                note.innerHTML = "We suggest you push in more calories there buddy"
+
+            }
+           
+           else if(reply > 18.5 & reply < 24.9){
+            
+                nameRange.innerHTML = "Normal";
+                nameRange.style.color = "#00C060";
+                numRange.innerHTML = "18.5 - 25.9";
+                numRange.style.color = "#00C060";
+                document.querySelector(".Normal").style.color = "#00C060";
+                note.innerHTML = "Keep it up champ! We suggest you maintain your weight. Here is a Link to lots of workouts and activity ideas to help you stay active. Cheers"
+
+            }
+           
+           else if(reply > 25.0 & reply < 29.9){
+            
+                nameRange.innerHTML = "Overweight";
+                nameRange.style.color = "#014122";
+                numRange.innerHTML = "25.0 - 29.9";
+                numRange.style.color = "#014122";
+                document.querySelector(".Overw").style.color = "#014122";
+                note.innerHTML = "Losing and keeping off 5% of your weight can have health benefits, such as lowering your blood pressure and reducing your risk of developing type 2 diabetes. You should work towards achieving a healthier weight over time. We suggest you visit your GP to discuss."
+
+            }
+           
+           else if(reply > 30.0 & reply < 34.9){
+            
+                nameRange.innerHTML = "Obese Class I";
+                nameRange.style.color = "#E97452";
+                numRange.innerHTML = "30.0 - 34.9";
+                numRange.style.color = "#E97452";
+                document.querySelector(".Ob1").style.color = "#E97452";
+                note.innerHTML = "Losing and keeping off 10% of your weight can have health benefits, such as lowering your blood pressure and reducing your risk of developing type 2 diabetes. You should work towards achieving a healthier weight over time. We suggest you visit your GP to discuss."
+
+            }
+           
+           else if(reply > 35.0 & reply < 39.9){
+            
+                nameRange.innerHTML = "Obese Class II";
+                nameRange.style.color = "#C34632";
+                numRange.innerHTML = "35.0 - 39.9";
+                numRange.style.color = "#C34632";
+                document.querySelector(".Ob2").style.color = "#C34632";
+                note.innerHTML = "Losing and keeping off 15% of your weight can have health benefits, such as lowering your blood pressure and reducing your risk of developing type 2 diabetes. You should work towards achieving a healthier weight over time. We suggest you visit your GP to discuss."
+
+            }
+           
+           else if (reply > 40.0) {
+            
+                nameRange.innerHTML = "Obese Class III";
+                nameRange.style.color = "#8B0001";
+                numRange.innerHTML = " > 40";
+                numRange.style.color = "#8B0001";
+                document.querySelector(".Ob3").style.color = "#8B0001";
+                note.innerHTML = "Losing and keeping off 20% of your weight can have health benefits, such as lowering your blood pressure and reducing your risk of developing type 2 diabetes. You should work towards achieving a healthier weight over time. We suggest you visit your GP to discuss."
+
+            }
+           
+
+            
+
+
+                 const age = document.querySelector("#agE");
+                 document.querySelector(".years").innerHTML = age.value;
+                 document.querySelector(".metre").innerHTML = height.value;
+                 document.querySelector(".kilo").innerHTML = weight.value;
+
+
+                 allForm.reset();
+
+                document.querySelector(".ansPage").style.display="block";
+
+                document.querySelector(".Holder").style.display="none";
+
+
+                hydroLoader();
+                console.log("Hello")
+            e.preventDefault()   
+        }
+
+
+
+        const backBtn = document.querySelector(".backBtn");
+
+        backBtn.addEventListener("click", function () {
+            document.querySelector(".ansPage").remove();
+            document.querySelector(".Holder").style.display="block";
+
+            
+        })
+
+
+        function hydroLoader(){
+            const hydroLd = document.querySelector(".hydro");
+
+            hydroLd.style.display = "block";
+
+            setTimeout (function () {
+                hydroLd.remove();
+            }, 2000);
+        }
+
+
+
+    </script>
+
+    
+</body>
+</html>

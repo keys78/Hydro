@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <title>BMI Calculator</title>
+    <link rel="icon" href="puku.ico">
+</head>
+<body class="bg-gray-100">
+
+    <section class="xl:w-4/12 lg:w-5/12 md:w-6/12 sm:w-8/12 w-full m-auto border border-current">
+
+        <div class="w-full h-20 border-none bg-green-500 text-center text-white text-3xl pt-6"style="font-family: 'Dancing Script', cursive;">Body Max Index Result</div>
+
+        <div class="cont w-11/12 mx-auto">
+
+            <div class="flex justify-between items-center w-11/12 mx-auto mt-4">
+                <h1 class="years text-2xl border-r w-4/12 border-current">20 <span>years</span></h1>
+                <h1 class="metre text-2xl border-r w-4/12 border-current px-4">1.82 <span>m</span></h1>
+                <h1 class="kilo text-2xl px-4">94 <span>Kg</span></h1>
+            </div>
+
+            <div class="w-11/12 mx-auto">
+             <input type="range" min="0" max="50" value="0" class="slider mt-6 w-full " id="myRange">
+            </div>
+
+            <div class="normal text-xl text-center mt-4 -ml-4">Your BMI is: <span class="answer font-bold text-2xl">28.5</span></div>
+
+             <div class="flex justify-between items-center mt-10 text-green-500">
+                <div class="nameRange text-xl"> Normal</div>
+                <div class="numRange text-xl">18.5 - 24.9</div>
+             </div>
+
+        </div>    
+
+                <!---------------RANGES------------------------>
+
+        <div class=" border-t border-current w-full">
+            <div class="Unrange">
+
+                <div class="Very flex justify-between items-center mt-4 text-lg font-semibold">
+                    <h1 class="h-7 w-7 bg-yellow-300"></h1>
+                    <h1 class="">Very Severly Underweight</h1>
+                    <h1 class=""> < 16 </h1>
+
+                </div>
+
+                <div class="Severly flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7 bg-yellow-600"></h1>
+                    <h1>Severly Underweight</h1>
+                    <h1 class=""> 16.0 - 16.0 </h1>
+                </div>
+
+                <div class="Under flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7 bg-yellow-600"></h1>
+                    <h1>Underweight</h1>
+                    <h1 class=""> 17.0 - 18.4 </h1>
+                </div>
+
+                <div class="Normal flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7 bg-green-600"></h1>
+                    <h1>Normal</h1>
+                    <h1 class=""> 18.5 - 24.9 </h1>
+                </div>
+
+                <div class="Overw flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7 bg-red-200"></h1>
+                    <h1>Overweight</h1>
+                    <h1 class=""> 25.0 - 29.9 </h1>
+                </div>
+
+                <div class="Ob1 flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7 bg-red-400"></h1>
+                    <h1>Obese Class I</h1>
+                    <h1 class=""> 30.0 - 34.9 </h1>
+                </div>
+
+                <div class="Ob2 flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7 bg-red-500"></h1>
+                    <h1>Obese Class II</h1>
+                    <h1 class=""> 35.0 - 39.9 </h1>
+                </div>
+
+                <div class="Ob3 flex justify-between items-center mt-4  text-lg font-semibold">
+                    <h1 class="h-7 w-7 bg-red-800"></h1>
+                    <h1>Obese Class III</h1>
+                    <h1 class=""> > 40.0 </h1>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class=" border-t border-current w-full my-3"></div>
+
+        <div class="note w-11/12 m-auto text-gray-500 font-medium">
+
+            Keep it up champ! We suggest you maintain your weight. Here is a <a class="text-purple-500" href="#">Link</a> to lots of 
+            workouts and activity ideas to help you stay active. Cheers
+            
+        </div>
+
+
+
+    </section>
+
+
+</body>
+</html>
